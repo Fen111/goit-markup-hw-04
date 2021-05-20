@@ -10,6 +10,7 @@
   --hero-bg-color: #c4c4c4;
   --header-line: #ececec;
   --project-border: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -130,27 +131,8 @@ ul {
   margin-left: auto;
 }
 
-.address .item::before {
-  margin-right: 10px;
-  content: '';
-  display: inline-flex;
-  background-size: contain;
-}
-
-.icon-envelope::before {
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/address-icon/envelope.svg);
-}
-
-.icon-smartphone::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/address-icon/smartphone.svg);
-}
-
 .address .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .address .address-link {
@@ -161,9 +143,30 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
 .address .address-link:hover,
 .address .address-link:focus {
   color: var(--accent-text-color);
+}
+
+.icon-mail:hover,
+.icon-smartphone:hover,
+.icon-mail:focus,
+.icon-smartphone:focus {
+  fill: var(--accent-text-color);
 }
 
 /* ================== END MAIL & PHONE =================== */
@@ -265,32 +268,6 @@ ul {
   margin-top: 30px;
 }
 
-.features .item::before {
-  margin-bottom: 30px;
-  content: '';
-  display: block;
-  height: 120px;
-  background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/features/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/features/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/features/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/features/astronaut.svg);
-}
-
 .features-title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -303,6 +280,23 @@ ul {
   line-height: 1.71;
 }
 
+.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+}
 /* ====================================== END FEATURES ====================================== */
 
 /* ==================== WORK ==================*/
@@ -358,29 +352,26 @@ ul {
 }
 
 .social-link {
-  display: inline-block;
-  content: '';
+  display: flex;
   width: 44px;
   height: 44px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
 }
 
-.icon-inst {
-  background-image: url(../images/our-team/instagramm.svg);
+.social-link:hover {
+  background-color: var(--accent-text-color);
+  fill: var(--white-color);
+  border-radius: 50%;
 }
 
-.icon-twitter {
-  background-image: url(../images/our-team/twitter.svg);
-}
-
-.icon-facebook {
-  background-image: url(../images/our-team/facebook.svg);
-}
-
+.icon-inst,
+.icon-twitter,
+.icon-facebook,
 .icon-linkedin {
-  background-image: url(../images/our-team/linkedin.svg);
+  width: 20px;
+  height: 20px;
 }
 
 /* =====SOCIAL ICON ===== */
@@ -398,6 +389,9 @@ ul {
 }
 
 .footer {
+  max-width: 1600px;
+  height: 252px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -424,7 +418,6 @@ ul {
 }
 
 .footer-social {
-  text-align: center;
   margin-left: 70px;
 }
 
