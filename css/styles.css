@@ -11,6 +11,7 @@
   --header-line: #ececec;
   --project-border: #eeeeee;
   --icon-color: #afb1b8;
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -144,8 +145,8 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.address .address-link:hover,
-.address .address-link:focus {
+.address-link:hover,
+.address-link:focus {
   color: var(--accent-text-color);
 }
 
@@ -208,6 +209,8 @@ ul {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -218,10 +221,7 @@ ul {
   background-size: cover;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -263,7 +263,8 @@ ul {
 
 .features .item,
 .work .item,
-.project .item {
+.project .item,
+.clients .item {
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -290,10 +291,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.icon-antenna,
-.icon-clock,
-.icon-diagram,
-.icon-astronaut {
+.features-icon .pic {
   width: 70px;
   height: 70px;
 }
@@ -380,10 +378,20 @@ ul {
 
 .client-link {
   display: flex;
+  justify-content: center;
   width: 170px;
   height: 92px;
-  border: var(--icon-color);
-  background-color: --;
+  fill: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.client-link:hover {
+  border: 1px solid var(--accent-text-color);
+}
+
+.client-link:hover .client-icon {
+  fill: var(--accent-text-color);
 }
 
 /* ================= END CLIENT =============== */
@@ -435,6 +443,16 @@ ul {
   text-transform: uppercase;
 }
 
+.social-footer-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dark-social-icon {
+  fill: var(--white-color);
+  background-color: var(--icon-bg-color);
+}
+
 /* ====================================== END FOOTER ====================================== */
 
 /* ################################# PORTFOLIO ##########################################  */
@@ -476,6 +494,8 @@ ul {
 .filter .filter-button:focus {
   color: var(--white-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ====================================== END FILTER ====================================== */
@@ -502,6 +522,12 @@ ul {
   padding: 20px 24px;
   border: 1px solid var(--project-border);
   border-top: 0;
+  box-sizing: border-box;
+}
+
+.project .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* ====================================== END PROJECTS ====================================== */
